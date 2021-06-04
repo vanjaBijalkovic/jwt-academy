@@ -21,3 +21,5 @@ use App\Http\Controllers\LoginController;
 
 
 Route::post('/login', [ LoginController::class, 'authenticate']);
+
+Route::middleware('jwt')->get('/getUser' , [ LoginController::class, 'getUser']);
